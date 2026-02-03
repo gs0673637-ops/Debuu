@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For Debojani ❤️</title>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin: 0;
+  background: linear-gradient(120deg, #ff9a9e, #fad0c4);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+}
+
+.container {
+  background: white;
+  padding: 50px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 0 40px rgba(0,0,0,0.2);
+  animation: fadeIn 2s ease;
+}
+
+h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 50px;
+  color: #ff4b6e;
+}
+
+p {
+  font-size: 18px;
+  margin-top: 20px;
+  color: #333;
+}
+
+button {
+  margin-top: 30px;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 30px;
+  background: #ff4b6e;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.1);
+  background: #ff1e56;
+}
+
+#message {
+  display: none;
+  margin-top: 30px;
+  font-size: 24px;
+  color: #ff1e56;
+  animation: pop 1s ease;
+}
+
+.heart {
+  position: absolute;
+  color: red;
+  font-size: 20px;
+  animation: float 6s linear infinite;
+}
+
+@keyframes float {
+  0% {transform: translateY(0); opacity: 1;}
+  100% {transform: translateY(-1000px); opacity: 0;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: scale(0.8);}
+  to {opacity: 1; transform: scale(1);}
+}
+
+@keyframes pop {
+  0% {transform: scale(0);}
+  100% {transform: scale(1);}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <h1>Debojani ❤️</h1>
+  <p>
+    From the moment you came into my life,<br>
+    everything became brighter, warmer, and happier.<br><br>
+    I don’t know what the future holds,<br>
+    but I know I want it with you.
+  </p>
+
+  <button onclick="showLove()">Click here 💖</button>
+
+  <div id="message">
+    Will you be my Valentine? 💍💕<br>
+    — Gaurav
+  </div>
+</div>
+
+<script>
+function showLove() {
+  document.getElementById("message").style.display = "block";
+  for (let i = 0; i < 30; i++) {
+    let heart = document.createElement("div");
+    heart.innerHTML = "❤️";
+    heart.className = "heart";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = (20 + Math.random() * 30) + "px";
+    heart.style.animationDuration = (4 + Math.random() * 4) + "s";
+    document.body.appendChild(heart);
+  }
+}
+</script>
+
+</body>
+  </html>
